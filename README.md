@@ -1,6 +1,6 @@
 # Global Refugee and Asylum-Seeker Analysis
 
-A comprehensive data-analytic workflow on global refugee and asylum-seeker data (2019–2024). We performed data ingestion, cleaning, exploratory data analysis (EDA), time-series forecasting, and advanced analytics (e.g., host‐burden indexing, clustering, regression). Our forecasting model uses Facebook Prophet on annual counts, projecting trends two years beyond 2024. Key findings highlight increasing host burdens in specific countries, seasonal patterns, and drivers of refugee movements.
+A comprehensive data-analytic workflow on global refugee and asylum-seeker data (2019–2024). We performed data ingestion, cleaning, exploratory data analysis (EDA), time-series forecasting, and advanced analytics (e.g., host‐burden indexing, clustering, regression). Our forecasting model uses Facebook prophet on annual counts, projecting trends two years beyond 2024. Key findings highlight increasing host burdens in specific countries, seasonal patterns, and drivers of refugee movements.
 
 ## 1 Introduction
 
@@ -29,10 +29,6 @@ Fields: Country of origin/asylum, Year, Refugees under UNHCR's mandate, Asylum-s
 ### 2.2 Data Dimensions
 
 Years: 6 annual snapshots (2019–2024).
-
-Records: ~X,XXX rows after concatenation.
-
-Geographies: ~Y countries of asylum, Z countries of origin.
 
 ## 3 Data Preprocessing
 
@@ -93,9 +89,9 @@ Aggregated annual totals by Year.
 
 ![image](https://github.com/user-attachments/assets/09d5400f-7add-4101-9611-479a7de67b1b)
 
-Converted integer Year → datetime (Year-01-01) for Prophet compatibility.
+Converted integer Year → datetime (Year-01-01) for prophet compatibility.
 
-### 6.2 Model Choice: Facebook Prophet
+### 6.2 Model Choice: Facebook prophet
 
 Handles seasonality (yearly), trend changepoints, and holidays.
 
@@ -188,10 +184,70 @@ GDP vs Refugees: bar charts linking economic wealth to refugee burden.
 
 ## 10. Conclusions and Recommendations
 
-Rising Burdens in countries like Lebanon and Jordan warrant increased international support.
+The dataset contains refugee and asylum information across multiple years (2019-2024) with details on:
 
-Seasonality & Trends: Refugee inflows show modest annual cycles but primarily upward linear growth—planning should assume continued increases.
+Refugees under UNHCR's mandate
+Asylum seekers
+Returned refugees
+Internally displaced persons (IDPs)
+Stateless persons
+For 2024, the data shows:
 
-Economic & Stability Drivers: GDP per capita and stability inversely correlate with refugee intake, suggesting wealthier, more stable nations host more.
+Total Refugees: 31,956,584
+Total Asylum Seekers: 7,996,077
+Total IDPs: 67,053,895
+Total Stateless Persons: 4,368,258
 
-Policy Implications: Data-driven resource allocations, preemptive capacity building in high-burden states, and targeted aid based on predictive forecasts.
+The global refugee crisis shows significant patterns across multiple dimensions, as illustrated in the time series visualization. This chart demonstrates the concurrent trends of refugee populations, asylum seekers, and internally displaced persons (IDPs) over the study period.
+
+![image](https://github.com/user-attachments/assets/d066e57b-90d3-4592-a1fa-7977e021b1cc)
+
+The heatmap reveals intense concentrations of refugee movements between specific regions and countries. The darker areas indicate higher refugee populations, showing major displacement corridors.
+
+![image](https://github.com/user-attachments/assets/46469926-13b1-4898-9f4b-764bfe6008cc)
+
+The Venezuela-US corridor represents the largest asylum-seeking situation with 620,074 cases in 2024
+Peru has been another major destination for Venezuelan asylum seekers
+
+![image](https://github.com/user-attachments/assets/094b6b17-0ad4-4b49-a8dc-192f4d4491af)
+
+This visualization maps the relationship between countries of origin and asylum, highlighting the primary migration routes and refugee hosting patterns.
+
+### Detailed Conclusions
+Temporal Trends
+The data shows a consistent upward trend in global displacement numbers
+There's been a notable acceleration in asylum applications post-2021
+IDP numbers have shown the most dramatic increases, indicating intensifying internal conflicts
+
+### Geographic Patterns
+Major refugee-hosting regions are concentrated in neighboring countries of conflict zones
+There's a significant disparity in refugee distribution, with some countries bearing disproportionate responsibility
+Cross-continental movement is limited compared to regional displacement
+
+### Policy Implications
+The increasing numbers suggest current international protection frameworks are under unprecedented strain
+There's a clear need for more equitable responsibility-sharing among nations
+The high number of stateless persons (4.3 million) indicates a persistent gap in international legal protection
+
+### Humanitarian Considerations
+The large IDP population (67 million) suggests internal conflicts remain a primary driver of displacement
+The ratio between refugees and asylum seekers indicates processing backlogs in many asylum systems
+The returned refugee numbers (433,527) are relatively low, suggesting prolonged displacement situations
+
+### Future Projections
+Current trends suggest continued growth in global displacement
+The Venezuelan crisis remains a significant factor in hemispheric migration patterns
+The high number of stateless persons indicates a long-term challenge requiring sustained international attention
+
+## Recommendations
+#### Strengthen international responsibility-sharing mechanisms
+#### Develop more efficient asylum processing systems
+#### Enhance support for major refugee-hosting countries
+#### Create targeted programs for protracted refugee situations
+#### Address root causes of displacement through preventive diplomacy
+#### Develop comprehensive solutions for statelessness
+#### Increase resources for IDP protection and assistance
+#### Strengthen early warning systems for potential displacement crises
+#### Improve coordination between humanitarian and development actors
+
+This analysis reveals a complex global displacement situation requiring sustained, coordinated international response. The data suggests that traditional approaches to refugee protection may need revision to address the scale and complexity of contemporary displacement challenges. The significant numbers across all categories (refugees, asylum seekers, IDPs, and stateless persons) indicate that forced displacement remains one of the most pressing global challenges of our time.
